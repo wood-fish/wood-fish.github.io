@@ -182,7 +182,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><strong>#数据结构实验一</strong><br>  反正这里闲着也是闲着，就用来记录一下写了好久的撇脚代码吧。<br>  ##题目要求如下：</p>
+      		<h1 id="数据结构实验一"><a href="#数据结构实验一" class="headerlink" title="数据结构实验一"></a>数据结构实验一</h1><p>  反正这里闲着也是闲着，就用来记录一下写了好久的撇脚代码吧。<br>  ##题目要求如下：</p>
 <p>实验一  学生成绩管理系统</p>
 <p>1.问题描述<br>学生成绩管理系统中的数据元素具有如下形式：<br>学生的成绩记录包括学号、姓名、语文、数学、计算机等数据项。<br>2．功能要求<br>对成绩登记表要求完成如下功能：<br>⑴ 插入：将某学生成绩记录插入到登记表中；<br>⑵ 删除：将满足条件的记录删除；<br>⑶ 修改：对成绩记录的数据项进行修改；<br>⑷ 查询：查找满足条件的学生；<br>⑸ 输出：将成绩记录登记表中的全部（或满足条件）成绩记录输出。<br>3．实现要点<br>    对成绩记录登记表采用顺序的存储结构，在建立表时，由成绩记录表的书写形式转化顺序表存储结构，还要把学生的书面形式转化为具体的类。<br>4．类定义<br>为顺序表建立SeqList，其类定义如下：<br>template &lt; class T &gt;<br>class SeqList<br>{<br>public:<br>   SeqList() {length=0;}       //无参构造函数<br>   SeqList(T a[ ], int n);       //有参构造函数<br>   ~SeqList( ) { }             //析构函数为空<br>   int Length( ) {return length;}  //求顺序表的长度<br>   T Get(int i);  //取顺序表的第i个元素<br>   void Insert(int i, T x);  //在顺序表中第i个位置插入值为x的元素<br>   T Delete(int i);        //删除顺序表的第i个元素<br>   void PrintList( );       //遍历顺序表，按序号依次输出各元素<br>   void PrintStudent(T x);  //有参输出函数<br>private:<br>   T data[MaxSize];      //存放学生及成绩记录的数组<br>   int length;            //顺序表的长度<br>};<br>在SeqList类中，提供了如下成员函数<br>(1) 函数声明   SeqList(T a[ ], int n);<br>       完成的功能 构造长度为n，元素为数组a[ ]中元素的顺序表<br>   (2) 函数声明    int Length( ) {return length;}<br>完成的功能  求顺序表长度<br>   (3) 函数声明    T Get(int i)<br>完成的功能  依次查找，读取表中第i个元素<br>(4) 函数声明    void Insert(int i, T x);<br>     完成的功能  在顺序表中第i个位置插入值为x的元素<br>(5) 函数声明    T Delete(int i);<br>完成的功能  查找并删除顺序表的第i个元素<br>   (6) 函数声明    void PrintList( )<br>       完成的功能  遍历顺序表，按序号依次输出各元素<br>   (7) 函数声明    void PrintStudent(T x)<br>       完成的功能  输出元素x</p>
 <p>蹩脚代码如下：</p>

@@ -167,22 +167,45 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
+    </div>
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
 <section id="intro">
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2021-04-11T08:06:00.074Z" itemprop="datePublished">
-          2021-04-11
-      </time>
-    
-</span>
                 <h1>数据结构实验一</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="数据结构实验一"><a href="#数据结构实验一" class="headerlink" title="数据结构实验一"></a>数据结构实验一</h1><p>  反正这里闲着也是闲着，就用来记录一下写了好久的撇脚代码吧。<br>  ##题目要求如下：</p>
+            <h1 id="数据结构实验一"><a href="#数据结构实验一" class="headerlink" title="数据结构实验一"></a>数据结构实验一</h1><p>  反正这里闲着也是闲着，就用来记录一下写了好久的撇脚代码吧。<br>  ##题目要求如下：</p>
 <p>实验一  学生成绩管理系统</p>
 <p>1.问题描述<br>学生成绩管理系统中的数据元素具有如下形式：<br>学生的成绩记录包括学号、姓名、语文、数学、计算机等数据项。<br>2．功能要求<br>对成绩登记表要求完成如下功能：<br>⑴ 插入：将某学生成绩记录插入到登记表中；<br>⑵ 删除：将满足条件的记录删除；<br>⑶ 修改：对成绩记录的数据项进行修改；<br>⑷ 查询：查找满足条件的学生；<br>⑸ 输出：将成绩记录登记表中的全部（或满足条件）成绩记录输出。<br>3．实现要点<br>    对成绩记录登记表采用顺序的存储结构，在建立表时，由成绩记录表的书写形式转化顺序表存储结构，还要把学生的书面形式转化为具体的类。<br>4．类定义<br>为顺序表建立SeqList，其类定义如下：<br>template &lt; class T &gt;<br>class SeqList<br>{<br>public:<br>   SeqList() {length=0;}       //无参构造函数<br>   SeqList(T a[ ], int n);       //有参构造函数<br>   ~SeqList( ) { }             //析构函数为空<br>   int Length( ) {return length;}  //求顺序表的长度<br>   T Get(int i);  //取顺序表的第i个元素<br>   void Insert(int i, T x);  //在顺序表中第i个位置插入值为x的元素<br>   T Delete(int i);        //删除顺序表的第i个元素<br>   void PrintList( );       //遍历顺序表，按序号依次输出各元素<br>   void PrintStudent(T x);  //有参输出函数<br>private:<br>   T data[MaxSize];      //存放学生及成绩记录的数组<br>   int length;            //顺序表的长度<br>};<br>在SeqList类中，提供了如下成员函数<br>(1) 函数声明   SeqList(T a[ ], int n);<br>       完成的功能 构造长度为n，元素为数组a[ ]中元素的顺序表<br>   (2) 函数声明    int Length( ) {return length;}<br>完成的功能  求顺序表长度<br>   (3) 函数声明    T Get(int i)<br>完成的功能  依次查找，读取表中第i个元素<br>(4) 函数声明    void Insert(int i, T x);<br>     完成的功能  在顺序表中第i个位置插入值为x的元素<br>(5) 函数声明    T Delete(int i);<br>完成的功能  查找并删除顺序表的第i个元素<br>   (6) 函数声明    void PrintList( )<br>       完成的功能  遍历顺序表，按序号依次输出各元素<br>   (7) 函数声明    void PrintStudent(T x)<br>       完成的功能  输出元素x</p>
 <p>蹩脚代码如下：</p>
@@ -191,70 +214,71 @@
 <p>嘛，虽然还是有很多的小问题，暂时就这样保存在这吧。</p>
 
             <div class="clearfix"></div>
-            <hr class="nogutter">
         </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    
-    <a class="pull-right" href="/2020/11/18/hello-world/">
-        Hello World →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div>
+        
     </div>
 </section>
-
+<section id="process">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="timeline-centered">
+                    <div class="line"></div>
+                    <div class="present">Past</div>
+                    <div class="dot_tp"></div>
+                    <div class="born">Now</div>
+                    <div class="dot_bt"></div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">1</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2014/06/12-Start</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">2</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2014/11/29-XXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">3</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>2015/02/18-DDD</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-entry">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="number">4</span>
+                                </div>
+                                <div class="timeline-label wow fadeInUp" data-wow-delay="0.2s">
+                                    <p>More</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <!-- timeline-centered -->
+            </div>
+        </div>
+    </div>
+</section>
 
       
 <!-- ============================ Footer =========================== -->
